@@ -1,14 +1,8 @@
 ---
 layout: page
-title: Welcome
-tagline: starting from scratch
+tagline: posts about science, technology, statistics, and biology 
 ---
 {% include JB/setup %}
-
-## Topics
-
-    science, programming 
-
 ## Posts
     
 <ul class="posts">
