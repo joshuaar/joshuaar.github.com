@@ -1,7 +1,8 @@
 ---
 layout: post
 category : lessons
-tagline: "Gaussian Processes - Basics and Intuition" 
+title: "Gaussian Processes"
+tagline: "Basics and Intuition" 
 tags : [statistics]
 ---
 {% include JB/setup %}
