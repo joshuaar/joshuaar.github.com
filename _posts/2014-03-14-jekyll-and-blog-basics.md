@@ -2,7 +2,7 @@
 layout: post
 category : lessons
 tagline: "First Post" 
-tags : [intro,first,post]
+tags : [programming]
 ---
 {% include JB/setup %}
 
