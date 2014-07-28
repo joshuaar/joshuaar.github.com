@@ -30,9 +30,6 @@ plt = function(res,n,title="plt"){
 	lines(quantiles[1,],col="blue")	
 	lines(quantiles[3,],col="blue")
 	points(res[[3]],col="black")	
-#	for(i in 1:nrow(r2)){
-#		lines(r2[i,])
-#	}
 }
 
 pltdraws = function(x,rbfk,n,title){
@@ -45,6 +42,7 @@ pltdraws = function(x,rbfk,n,title){
 	}
 }
 
+#Plot random GP draws on an RBF kernel
 plt4GPs = function(){
 	x = 1:50
 	rbf1 = function(a,b)rbf(a,b,1)
@@ -58,6 +56,7 @@ plt4GPs = function(){
 	pltdraws(x,rbf20,20,"L = 20")
 }
 
+#Fit GPs with defined kernels to data
 plt4FittedGPs = function(){
 	x = 1:50
 	obs = cbind(c(5,7,10,15,40),c(3.3,2.1,.5,-1,0))
