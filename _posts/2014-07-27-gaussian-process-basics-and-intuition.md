@@ -80,7 +80,7 @@ following the [formula](http://en.wikipedia.org/wiki/Multivariate_normal_distrib
 
 ![Draws from conditioned gaussian process]({{ site.url }}/assets/img/4fittedplot.jpg)
 
-The first thing you might notice in these plots is that there is no noise at the four points corresponding to observations. This is due to the simplistic way I defined my gaussian process. More sophistocated methods will add noise to these observations to make a more realistic model, which is purposefully ignored here for simplicity.
+The first thing you might notice in these plots is that there is no noise at the five points corresponding to observations. This is due to the simplistic way I defined my gaussian process. More sophistocated methods will add noise to these observations to make a more realistic model, which is purposefully ignored here for simplicity.
 
 Why are conditioned gaussian processes useful, you might ask? Well, most people use gaussian processes to do some sort of prediction.
 A kalman filter, for example, is very similar to a gaussian process and is well known as a good localization predictor. Other uses include gaussian process regression.
