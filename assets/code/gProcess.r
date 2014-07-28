@@ -62,10 +62,10 @@ plt4FittedGPs = function(){
 	x = 1:50
 	obs = cbind(c(5,7,10,15,40),c(3.3,2.1,.5,-1,0))
 	par(mfrow=c(2,2))
-	plt(rbfGP(obs,1:50,1,5),10,title="L = 1")
-	plt(rbfGP(obs,1:50,5,5),10,"L = 5")
-	plt(rbfGP(obs,1:50,10,5),10, "L = 15")
-	plt(rbfGP(obs,1:50,20,5),10, "L = 20")
+	plt(rbfGP(obs,1:50,1,5),10000,title="L = 1")
+	plt(rbfGP(obs,1:50,5,5),10000,"L = 5")
+	plt(rbfGP(obs,1:50,10,5),10000, "L = 15")
+	plt(rbfGP(obs,1:50,20,5),10000, "L = 20")
 	
 	
 }
