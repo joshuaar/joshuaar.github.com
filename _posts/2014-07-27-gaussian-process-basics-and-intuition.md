@@ -7,7 +7,7 @@ tags : [statistics]
 ---
 {% include JB/setup %}
 
-Code for producing the plots can be found [here](https://gist.github.com/joshuaar/e5f68b88c6845e84a045).
+Code for producing the plots can be found [here](https://gist.github.com/joshuaar/0be2845c29043c85f6ff).
 
 ##What is a Gaussian Process?
 
