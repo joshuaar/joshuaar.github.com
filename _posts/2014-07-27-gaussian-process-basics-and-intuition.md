@@ -34,20 +34,20 @@ the parameters for the distribution that these draws came from is defined below:
     mu = 
     0	0	0	0	0
 
-Now, as mentioned before, a Gaussian process is just a multivariate normal distribution carried to infinite dimensions. But, if dimensions are infinite, so $$\Sigma$$ is an infinite by infinite matrix. We get around this by defining $$\Sigma$$ as a function rather than a finite dimensioned matrix.  
+Now, as mentioned before, a Gaussian process is just a multivariate normal distribution carried to infinite dimensions. But, if dimensions are infinite, so \\(\Sigma\\) is an infinite by infinite matrix. We get around this by defining \\(\Sigma\\) as a function rather than a finite dimensioned matrix.  
 
 ###Constructing a gaussian process
 
-To construct the GP, we need some rules. First, we need a set $$T$$. It doesn't
-really matter what T is. It could be any set. The only requirement (to my knowledge) is that for any elements $$t1 \in T$$ and $$t2 \in T$$, some distance function $$||t1-t2||$$ is defined. In order to make visualization easier, we will assume $$T = \mathbb{R}$$. 
+To construct the GP, we need some rules. First, we need a set \\(T\\). It doesn't
+really matter what T is. It could be any set. The only requirement (to my knowledge) is that for any elements \\(t1 \in T\\) and \\(t2 \in T\\), some distance function \\(||t1-t2||\\) is defined. In order to make visualization easier, we will assume \\(T = \mathbb{R}\\). 
 
 The important thing about T is that each element is assigned to one "dimension" in our gaussian process such that for any finite sequence 
 
-$$(t1,t2,t3,...tn) \in T$$
+\\((t1,t2,t3,...tn) \in T\\)
 
 the multivariate random variable 
 
-$$(X_{t1}, X_{t2}, X_{t3}, ..., X_{tn})$$ 
+\\((X_{t1}, X_{t2}, X_{t3}, ..., X_{tn})\\)
 
 is distributed multivariate normal. The relationship between the t's and X's will become clearer after introducing the concept of a kernel.
 
@@ -55,11 +55,11 @@ The second thing we need is some function to represent our infinite covariance m
 [RBF kernel](http://en.wikipedia.org/wiki/Radial_basis_function_kernel)
 which looks like this:
 
-$$K(t_a, t_b) = exp(-\frac{||t_a - t_b||^2}{2l^2})$$
+\\(K(t_a, t_b) = exp(-\frac{||t_a - t_b||^2}{2l^2})\\)
 
-It has a single parameter, $$l$$ which defines the "wiggliness" of the GP. This function enables us to translate elements from T into "dimensions" of the GP. You can find more examples of kernel functions [here](http://mlg.eng.cam.ac.uk/duvenaud/cookbook/index.html).
+It has a single parameter, \\(l\\) which defines the "wiggliness" of the GP. This function enables us to translate elements from T into "dimensions" of the GP. You can find more examples of kernel functions [here](http://mlg.eng.cam.ac.uk/duvenaud/cookbook/index.html).
 
-Remember, gaussian processes are just multivariate normal distributions with infinite dimensions. So, lets look at part of a gaussian process using integers $$1:50$$ as our finite sequence. This should give us a multivariate gaussion from which we can take draws. Here is what these draws look like for various values of $$l$$:
+Remember, gaussian processes are just multivariate normal distributions with infinite dimensions. So, lets look at part of a gaussian process using integers \\(1:50\\) as our finite sequence. This should give us a multivariate gaussion from which we can take draws. Here is what these draws look like for various values of \\(l\\):
 
 
 ![draws from a gaussian process]({{ site.url }}/assets/img/4plots.jpg)
@@ -75,7 +75,7 @@ Fitting a gaussian process to observed data is trivial if you have fully defined
     15	-1.0
     40	0.0
 
-following the [formula](http://en.wikipedia.org/wiki/Multivariate_normal_distribution#Conditional_distributions) for getting a conditional distribution from a multivariate normal (it works the same for a gaussian process), we can put bounds on our gaussian process, and we get fits that look more orderly. Here are plots and 95% CI bounds for the GP dimensions corresponding to $$1:50$$:
+following the [formula](http://en.wikipedia.org/wiki/Multivariate_normal_distribution#Conditional_distributions) for getting a conditional distribution from a multivariate normal (it works the same for a gaussian process), we can put bounds on our gaussian process, and we get fits that look more orderly. Here are plots and 95% CI bounds for the GP dimensions corresponding to \\(1:50\\):
 
 ![Draws from conditioned gaussian process]({{ site.url }}/assets/img/4fittedplot.jpg)
 
@@ -83,10 +83,12 @@ Why do this, you might ask? Well, most people use gaussian processes to do some 
 
 ###Hyperparameters
 
-As you can see, our conditioned gaussian process depends strongly on our choice of the parameter $$l$$. This is known as a hyperparameter, and choosing these is the domain of [Bayesian Statistics](http://en.wikipedia.org/wiki/Bayesian_statistics). 
+As you can see, our conditioned gaussian process depends strongly on our choice of the parameter \\(l\\). This is known as a hyperparameter, and choosing these is the domain of [Bayesian Statistics](http://en.wikipedia.org/wiki/Bayesian_statistics). 
 
 The details of fitting hyperparameters to data is beyond the scope of this guide. Briefly, you assign a prior distribution over the hyperparameters of interest, then use an [MCMC](http://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) to estimate the posterior probabilities on those hyperparameters.
 
 ###Closing remarks
 
-The examples shown here all were from a 1-dimensional set $$T$$. This set need not be one dimensional, and in real world situations this may be many-dimensioned or even infinite-dimensioned. Further, there are many possible kernels and hyperparameters for building more complicated models. The intent of this guide is to provide an intuition for what gaussian processes are and how they are used. For a more rigerous interoduction, see [this link](http://www.cs.toronto.edu/~hinton/csc2515/notes/gp_slides_fall08.pdf) 
+The examples shown here all were from a 1-dimensional set \\(T\\). This set need not be one dimensional, and in real world situations this may be many-dimensioned or even infinite-dimensioned. Further, there are many possible kernels and hyperparameters for building more complicated models. The intent of this guide is to provide an intuition for what gaussian processes are and how they are used. For a more rigerous interoduction, see [this link](http://www.cs.toronto.edu/~hinton/csc2515/notes/gp_slides_fall08.pdf) 
+
+Code for producing the plots can be found [here]({{ site.url }}/assets/code/gProcess.r).
