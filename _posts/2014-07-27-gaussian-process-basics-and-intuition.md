@@ -34,7 +34,7 @@ the parameters for the distribution that these draws came from is defined below:
     mu = 
     0	0	0	0	0
 
-Now, as mentioned before, a Gaussian process is just a multivariate normal distribution carried to infinite dimensions. But, if dimensions are infinite, so \\(\Sigma\\) is an infinite by infinite matrix. We get around this by defining \\(\Sigma\\) as a function rather than a finite dimensioned matrix.  
+Now, as mentioned before, a Gaussian process is just a multivariate normal distribution carried to infinite dimensions. But, if dimensions are infinite, then \\(\Sigma\\) is an infinite by infinite matrix. We get around this by defining \\(\Sigma\\) as a function rather than a finite dimensioned matrix.  
 
 ###Constructing a gaussian process
 
