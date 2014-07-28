@@ -17,7 +17,7 @@ Consider the following multivariate normal distribution:
 
 $$Y \sim N(0,\Sigma)$$
 
-In this case, $\Sigma$, a positive semidefinite matrix, entirely defines the distribution. 
+In this case, \\(\Sigma\\), a positive semidefinite matrix, entirely defines the distribution. 
 
 Here is an example of some draws for some random $\Sigma$:
 ![draws from a multivariate normal]({{ site.url }}/assets/img/mnorm_c1.jpg)
