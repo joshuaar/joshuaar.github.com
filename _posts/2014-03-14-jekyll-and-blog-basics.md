@@ -25,7 +25,7 @@ On the flipside, you can only sort posts by date, no custom sort. I'd prefer tha
 
 ### How to do lists in markdown
 
-I'll probably need to make some lists at some point, especially if I start makeing some real posts.
+I'll probably need to make some lists at some point, especially if I start making some real posts.
 Here's how to do it:
 
     - List item 1 
