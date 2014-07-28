@@ -19,7 +19,7 @@ $$Y \sim N(0,\Sigma)$$
 
 In this case, \\(\Sigma\\), a positive semidefinite matrix, entirely defines the distribution. 
 
-Here is an example of some draws for some random $\Sigma$:
+Here is an example of some draws for some random \\(\Sigma\\):
 ![draws from a multivariate normal]({{ site.url }}/assets/img/mnorm_c1.jpg)
 
 the parameters for the distribution that these draws came from is defined below:
