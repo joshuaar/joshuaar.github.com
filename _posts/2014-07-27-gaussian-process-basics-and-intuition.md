@@ -40,7 +40,7 @@ Now, as mentioned before, a Gaussian process is just a multivariate normal distr
 ###Constructing a gaussian process
 
 To construct the GP, we need some rules. First, we need a set \\(T\\). It doesn't
-really matter what T is. It could be any set. The only requirement (to my knowledge) is that for any elements \\(t1 \in T\\) and \\(t2 \in T\\), some distance function \\(||t1-t2||\\) is defined. In order to make visualization easier, we will assume \\(T = \mathbb{R}\\). 
+really matter what T is. It could be any set. The only requirement (to my knowledge) is that for any elements \\(t1 \subset T\\) and \\(t2 \subset T\\), some distance function \\(||t1-t2||\\) is defined. In order to make visualization easier, we will assume \\(T = \mathbb{R}\\). 
 
 The important thing about T is that each element is assigned to one "dimension" in our gaussian process such that for any finite sequence 
 
