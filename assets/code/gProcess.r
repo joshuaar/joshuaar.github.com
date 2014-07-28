@@ -1,3 +1,4 @@
+require(MASS)
 rbf=function(a,b,l,s=1)s*exp(-((a-b)^2) / (2*l^2))
 cov=function(x1,x2,K)sapply(x2,function(i)sapply(x1,function(j)K(i,j)))
 
