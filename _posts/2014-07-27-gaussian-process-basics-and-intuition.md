@@ -52,7 +52,7 @@ the multivariate random variable
 
 is distributed multivariate normal. The relationship between the t's and X's will become clearer after introducing the concept of a kernel.
 
-The second thing we need is some function to represent our infinite covariance matrix. Since we assume our mean vector is $$0$$, this important function, known as a __kernel__, will completely define our gaussian process. One example of a kernal is the 
+The second thing we need is some function to represent our infinite covariance matrix. Since we assume our mean vector is \\(0\\), this important function, known as a __kernel__, will completely define our gaussian process. One example of a kernal is the 
 [RBF kernel](http://en.wikipedia.org/wiki/Radial_basis_function_kernel)
 which looks like this:
 
