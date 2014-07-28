@@ -89,6 +89,6 @@ The details of fitting hyperparameters to data is beyond the scope of this guide
 
 ###Closing remarks
 
-The examples shown here all were from a 1-dimensional set \\(T\\). This set need not be one dimensional, and in real world situations this may be many-dimensioned or even infinite-dimensioned. Further, there are many possible kernels and hyperparameters for building more complicated models. The intent of this guide is to provide an intuition for what gaussian processes are and how they are used. For a more rigerous interoduction, see [this link](http://www.cs.toronto.edu/~hinton/csc2515/notes/gp_slides_fall08.pdf) 
+The examples shown here all were from a 1-dimensional set \\(T\\). This set need not be one dimensional, and in real world situations this may be many-dimensioned or even infinite-dimensioned. Further, there are many possible kernels and hyperparameters for building more complicated models. The intent of this guide is to provide an intuition for what gaussian processes are and how they are used. For a more rigerous introduction, see [this link](http://www.cs.toronto.edu/~hinton/csc2515/notes/gp_slides_fall08.pdf) 
 
 Code for producing the plots can be found [here]({{ site.url }}/assets/code/gProcess.r).
