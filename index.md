@@ -1,6 +1,6 @@
 ---
 layout: page
-tagline: posts about science, technology, statistics, and biology 
+tagline: science, technology, statistics, and biology 
 ---
 {% include JB/setup %}
 ## Posts
