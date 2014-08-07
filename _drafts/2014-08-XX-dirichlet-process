@@ -1,0 +1,58 @@
+---
+layout: post
+category : lessons
+title: "Dirichlet Processes"
+tagline: "Basics and Intuition" 
+tags : [statistics]
+---
+{% include JB/setup %}
+
+
+##deriving full conditionals
+
+for gibbs sampling we need full conditional
+
+X: state space of gibbs sampler (vector of thetas in dirichlet model)
+has k components, each can be scaler or vector
+
+gibbs sampling:
+X_-s = (X_1,...,s+1,...X_k)
+repeatedly sample
+X_s ~ Pi(X_s|X_{t-s})
+Above is the full conditional
+
+#equation 1
+Pi(X_s|X_{t-s}) = Pi(X_s,X_t-s) / \int_ Pi(X_s,X_{t-s}) dX_s, 
+
+that is, the conditional on x is the joint liklihood over the marginal (??)
+
+Simple bayesian model:
+
+y = {yi, i=1...n}
+yi ~ N(mu, r^-1)
+mu ~ N(0,1)
+r ~ Ga(2,1) ??What is gamma??
+
+we need the joint distribution of y,mu,r
+
+P(y,mu,r) = product_i.to.n(P(y_i|mu,t))*P(mu)*P(r)
+#chain rule
+
+y is the observed data
+
+So by equation 1 above
+
+Pi(mu,r)=P(mu,r|y) = P(y,mu,r) / int(P(y,mu,r)dudr)
+#equation 2
+
+When an analytical solution to the above is not available,
+it is necessary to evaluate the full conditional function at a number of points, which may be computationally expensive. see metropolis hastings algorithm.
+
+gibbs sampler is more efficient, but metropolis hastings is easier because does not require the complex integral. from equations 1 and 2
+
+
+This complex integral is called the normalization factor
+
+Markov Chain Monte Carlo in Practice
+Gilks
+
