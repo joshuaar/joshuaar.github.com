@@ -67,7 +67,7 @@ Yes, the sequences are not as prettily formatted, but NCBI doesn't care, and nei
 No, of course not! Much too easy. There are a myriad of other errors that could crop up during the submission process. You need to run [tbl2asn](http://www.ncbi.nlm.nih.gov/genbank/tbl2asn2)
 in order to get the sqn file required to submit.
 
-To save the reader some trouble, here is the command I used after much trial and error. The moltype and tech source qualifiers are REQUIRED for submission, as is a [template.sbt](http://www.ncbi.nlm.nih.gov/WebSub/template.cgi). Replace the organism tag with whatever yours is. This will be appended to the FASTA header for each sequence.
+To save the reader some trouble, here is the command I used. The moltype and tech source qualifiers are REQUIRED for submission, as is a [template.sbt](http://www.ncbi.nlm.nih.gov/WebSub/template.cgi). Replace the organism tag with whatever yours is. This will be appended to the FASTA header for each sequence.
 
     tbl2asn -t template.sbt -p . -a s -j "[organism=Lygus hesperus] [moltype=transcribed_RNA] [tech=TSA]" -V v
 
