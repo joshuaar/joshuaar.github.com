@@ -101,20 +101,25 @@ This will print a list of errors (unless you have no errors):
 
 We must correct these errors before NCBI will take our data. 
 
+In my case there were 53 errors like these, out of over 20,000 sequences in the transcriptome.
+At less than 0.1% of overall expression, these are not worth my time. I chose to simply
+remove them.
+
 You can extract the responsible sequence with some awk-fu:
 
     cat transcriptome.new.val|grep ERROR|awk -F"|" '{print $2}'|awk -F":" '{print $1}' > transcriptome.blacklist
 
-In fact, you might want to remove all errors AND warnings if there are not too many, just to be sure.
+This creates a file, transcriptome.blacklist, listing all the sequences we want to exclude from submission.
 
-This creates a file, transcriptome.blacklist, listing all our identifiers we want to exclude from submission.
+Now re-run transvestigator including this blacklist file, and recreate the .sqn file with tbl2asn
 
-Now you need to re-run transvestigator including this blacklist file. Once you do that and recreate the .sqn file with tbl2asn, you can FINALLY submit to NCBI
+Now it is time for submission to NCBI
 
 ##Submission
 
 Follow NCBI's [TSA Submission Guide](http://www.ncbi.nlm.nih.gov/genbank/tsaguide) for instructions on how to get to the point where you upload files.
-You will need to create a BioProject and BioSamples corresponding to each sample included in your TSA submission.
+You will need to create a BioProject and BioSamples corresponding to each sample included in the assembly..
 
-Finally you will upload your (hopefully) error free .sqn file, and perhaps the bioinformatics gods will accept your offering (but they probably won't). 
-Iterate on the above procedures until they do, then go home and cry yourself to sleep.
+Finally you will upload your (hopefully) error free .sqn file, and perhaps the bioinformatics gods will accept your offering (but they probably won't). If you get more errors, well, you'll just have to investigate them.
+
+Iterate on the above procedures until the errors go away, then go home and cry yourself to sleep.
