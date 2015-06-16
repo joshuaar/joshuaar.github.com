@@ -75,6 +75,7 @@ which looks like this:
 
 $$K(t_i, t_j) = exp(-\frac{||t_i - t_j||^2}{2l^2})$$
 
+
 It has a single parameter, \\(l\\) which determines the "wiggliness" of the GP.
 This function enables us to translate elements from T into "dimensions" of the
 GP. You can find more examples of kernel 
