@@ -1,7 +1,7 @@
 ---
 layout: post
 category : musings
-tagline: "Machine Learning in Healthcaree" 
+tagline: "is it useful?" 
 tags : [analytics, machine learning, healthcare]
 ---
 {% include JB/setup %}
